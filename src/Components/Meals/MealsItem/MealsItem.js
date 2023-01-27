@@ -1,4 +1,4 @@
-import React from 'react'
+import MealsItemForm from './MealsItemForm';
 import classes from './MealsItem.module.css';
 
 const MealsItem=(props)=> {
@@ -6,11 +6,13 @@ const MealsItem=(props)=> {
   return (
     <li>
         <div>
-            <h3>{props.name}</h3>
-            <div>{props.description}</div>
-            <div>{price}</div>
+            <h3 className={classes.name}>{props.name}</h3>
+            <div className={classes.description}>{props.description}</div>
+            <div className={classes.price}>{price}</div>
         </div>
-        <div></div>
+        <div>
+            <MealsItemForm/>
+        </div>
     </li>
   )
 }
