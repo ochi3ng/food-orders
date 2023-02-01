@@ -24,7 +24,7 @@ const MealsItemForm =({onAddToCart}) => {
     <form className={classes.form} onSubmit={e=>submitHandler(e)}>
         <Input
         ref={amountInputRef}
-         label="Amount" input={{
+         label="Quantity" input={{
             id:'amount',
             type:'number',
             min:'1',
@@ -34,7 +34,6 @@ const MealsItemForm =({onAddToCart}) => {
 
         }}/>
         <button type="submit" >+ Add</button>
-        {!amountIsValid && <p>please enter a valid amount (1-5)</p>}
     </form>
   )
 };

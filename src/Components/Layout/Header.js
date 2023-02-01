@@ -11,7 +11,6 @@ const Header = ({onShowCart}) => {
       <header className={classes.header}>
         <h1>ReactMeals</h1>
         <HeaderCartButton onShowCart={onShowCart}/>
-   
       </header>
       <div className={classes['main-image']}>
         <img src={mealsImage} alt='A table full of delicious food!' />

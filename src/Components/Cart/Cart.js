@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 
+import Modal from '../UI/Modal';
 import classes from './Cart.module.css';
 import {CartContext} from '../Store/CartProvider';
 import CartItem from './CartItem';
@@ -33,7 +34,7 @@ const Cart = ({hideCartHandler}) => {
   );
 
   return (
-    <div>
+    <Modal>
       {cartItems}
       <div className={classes.total}>
         <span>Total Amount</span>
@@ -43,7 +44,7 @@ const Cart = ({hideCartHandler}) => {
         <button className={classes['button--alt']} onClick={hideCartHandler}>Close</button>
         { hasItems && <button className={classes.button}>Order</button>}
       </div>
-    </div>
+    </Modal>
   );
 };
 
